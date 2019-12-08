@@ -1,58 +1,43 @@
 package main.thirdweek;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args){
+        try(BufferedReader input = new BufferedReader(new FileReader("/home/ren/IFMO_Algorithms/templates/input.txt"));
+            BufferedWriter output = new BufferedWriter(new FileWriter("/home/ren/IFMO_Algorithms/templates/output.txt"))){
 
-        try(BufferedReader input = new BufferedReader(new FileReader("D:\\alghorithms\\IFMOcourse\\Algorithms\\templates\\input.txt"));
-            BufferedWriter output = new BufferedWriter(new FileWriter("D:\\alghorithms\\IFMOcourse\\Algorithms\\templates\\output.txt"))){
-
-            String in = input.readLine() + " " + input.readLine() + " " + input.readLine();
-            Scanner sc = new Scanner(in);
-
+            String str = input.readLine();
+            Scanner sc = new Scanner(str);
             int n = sc.nextInt();
             int m = sc.nextInt();
+            int k = sc.nextInt();
 
-            int[] A = new int[n];
-            int[] B = new int[m];
-            int[] C = new int[n*m];
+            byte[][] a = new byte[m][];
 
-            for (int i = 0; i < n; i++){
-                A[i] = sc.nextInt();
-            }
-
-            for (int i = 0; i < m; i++){
-                B[i] = sc.nextInt();
-            }
-
-            int i = 0;
-            while ( i < n*m){
-
-                for(int j = 0; j < m; j++){
-                    for(int k = 0; k < n; k++){
-                        C[i] = A[k] * B[j];
-
-//                        System.out.print("[" + i + "] = [" + j + "] * [" + k + "]" );
-//                        System.out.println();
-                        i++;
-                    }
+            for(int i = 0; i < m; i++){
+                for(int j = 0; j < n; j++){
+                    a[i][j] = sc.nextByte();
+                    System.out.print(a[i][j]);
                 }
-
-
+                System.out.println();
             }
-
-            System.out.println();
-            printArray(C);
 
         } catch(IOException e){
             e.getMessage();
         }
     }
 
+    public static void radixSort(long[] a, int d){
+        for (int i = d; i >= 0; i--){
+            //countingSort(a, i);
+        }
 
-    public static void printArray(int[] array) {
+    }
+
+
+    public static void printArray(long[] array) {
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + " ");
         }
