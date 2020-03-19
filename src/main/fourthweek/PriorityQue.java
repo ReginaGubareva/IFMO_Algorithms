@@ -7,8 +7,6 @@ public class PriorityQue {
     private int head;
     private int tail;
     private int current_size;
-    private Stack<Integer> stack;
-
 
     public PriorityQue(int n){
 
