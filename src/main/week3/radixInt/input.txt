@@ -1,0 +1,12 @@
+4 4
+7 1 4 9
+2 7 8 11
+
+
+babbcccdeababbcccdea
+bbaaaabbbcbbaaaabbbc
+baabaacddaaaaaaccccc
+babbcccdeababbcccdea
+bbaaaabbbcbbaaaabbbc
+baabaacddaaaaaaccccc
+babbcccdeababbcccdea
