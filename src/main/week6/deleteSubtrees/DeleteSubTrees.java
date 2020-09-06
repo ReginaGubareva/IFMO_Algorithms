@@ -64,10 +64,10 @@ class Tree{
         }
     }
 
-    public void removeSubTree(Node node){
-        if(node)
-
-    }
+//    public void removeSubTree(Node node){
+//        if(node)
+//
+//    }
 
     public void insert(int key) {
         Node current = root;
